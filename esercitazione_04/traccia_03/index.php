@@ -7,7 +7,7 @@ class Car {
         $this->num_telaio = $telaio;
     }
 
-    protected function tellMeNumTelaio(){
+    protected static function tellMeNumTelaio(){
         return $this->num_telaio;
     }
 }
