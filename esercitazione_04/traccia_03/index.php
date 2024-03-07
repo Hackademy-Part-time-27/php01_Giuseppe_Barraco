@@ -27,6 +27,6 @@ class MyCar extends Car {
     }
 }
 
-$car = new MyCar('1234', 'Fiat Punto', 'ND 123OJ');
+$car = new MyCar('1234', 'Fiat Punto', 'ND 123 OJ');
 $car->frase();
 var_dump($car);
