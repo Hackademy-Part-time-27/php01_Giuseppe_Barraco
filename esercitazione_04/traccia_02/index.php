@@ -1,20 +1,20 @@
 <?php
 
 class Vertebrates {
-    protected function verte(){
-        echo "Sono un animale Vertebrato";
+    protected static function verte(){
+        echo "Sono un animale vertebrato" . "\n";
     }
 }
 
 class WarmBlooded extends Vertebrates {
     protected function warm(){
-        echo "Sono un animale a sangue caldo";
+        echo "Sono un animale a sangue caldo" . "\n";
     }
 }
 
 class ColdBlooded extends Vertebrates {
-    protected function cold(){
-        echo "Sono un animale a sangue freddo";
+    protected static function cold(){
+        echo "Sono un animale a sangue freddo" . "\n";
     }
 }
 
@@ -32,7 +32,7 @@ class Mammals extends WarmBlooded {
 
 class Birds extends WarmBlooded {
     protected function bird(){
-        echo "Sono un uccello";
+        echo "Sono un uccello" . "\n";
     }
 
     public function __construct(){
@@ -43,20 +43,23 @@ class Birds extends WarmBlooded {
 }
 
 class Fish extends ColdBlooded {
-    protected function fish(){
-        echo "Sono un pesce";
+    protected static function fish(){
+        echo "Sono un pesce" . "\n";
     }
 
     public function __construct(){
-        echo "Sono un animale Vertebrato" . "\n";
-        echo "Sono un animale a sangue freddo" . "\n";
-        echo "Sono un pesce" . "\n";
+        Vertebrates::verte();
+        ColdBlooded::cold();
+        Fish::fish();
+        //echo "Sono un animale Vertebrato" . "\n";
+        //echo "Sono un animale a sangue freddo" . "\n";
+        //echo "Sono un pesce" . "\n";
     }
 }
 
 class Reptiles extends ColdBlooded {
     protected function rept(){
-        echo "Sono un rettile";
+        echo "Sono un rettile" . "\n";
     }
 
     public function __construct(){
@@ -68,7 +71,7 @@ class Reptiles extends ColdBlooded {
 
 class Amphibians extends ColdBlooded {
     protected function amphi(){
-        echo "Sono un anfibio";
+        echo "Sono un anfibio" . "\n";
     }
 
     public function __construct(){
